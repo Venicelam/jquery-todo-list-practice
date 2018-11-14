@@ -43,6 +43,34 @@ $(document)
            }
            });
 
+       $("[href='#']").click(function() {
+       if ($(this).attr("data-filter") == "all"){
+         $(".done-todo").each(function(){
+               $(this).parent().show();
+            })
+        };
+
+       if ($(this).attr("data-filter") == "active"){
+            $(".done-todo").each(function(){
+               if(this.checked){
+                  $(this).parent().hide();
+               } else{
+                  $(this).parent().show();
+               }
+            });
+           }
+
+       if ($(this).attr("data-filter") == "complete") {
+            $(".done-todo").each(function(){
+               if(this.checked){
+                  $(this).parent().show();
+               } else{
+                  $(this).parent().hide();
+               }
+             });
+           }
+          });
+
         });
 
 
