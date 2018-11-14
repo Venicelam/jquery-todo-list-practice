@@ -21,5 +21,14 @@ $(document)
             return uuid;
         }
 
-        // code to be implemented
-    });
+        function addList() {
+            var inputText = $(".input-text").val();
+            $("ol").append('<li id='+ generateUUID() + ' class="itemList">' + '<input name="done-todo" type="checkbox" class="done-todo">' + inputText+ '</li>');
+            $(".input-text").val('');
+        }
+       $('#button').click(addList);
+
+
+        });
+
+
