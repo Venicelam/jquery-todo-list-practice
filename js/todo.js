@@ -28,7 +28,22 @@ $(document)
         }
        $('#button').click(addList);
 
+       $("ol").on("click", ".done-todo", function() {
+           if (this.unchecked){
+               $(this).parent().removeClass("checked");
+           } else{
+               $(this).parent().addClass("checked");
+            }
+           });
+       $("ol").on("click", ".done-todo", function() {
+           if (this.checked){
+               $(this).parent().addClass("checked");
+           } else{
+               $(this).parent().removeClass("checked");
+           }
+           });
 
         });
+
 
 
