@@ -70,7 +70,12 @@ $(document)
              });
            }
           });
-
+        $(document).on("dblclick", "li", function() {
+            $(this).attr("contenteditable", "true");
+        });
+        $(document).on("focusout", "li", function() {
+            $(this).attr("contenteditable", "false");
+        });
         });
 
 
